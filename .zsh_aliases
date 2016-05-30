@@ -1,0 +1,27 @@
+#system
+alias sugoi='brew update && brew install'
+alias shinde='rm -r -f'
+function douzo(){
+mkdir $1
+cd $1
+}
+#web dev
+alias arigato='bundle update && bundle install'
+alias kudasai='bundle exec rake'
+alias tsukutte='bundle exec rake assets:precompile'
+alias kaite='bundle exec rake db:create'
+alias itte='bundle exec rake db:migrate'
+alias chigaimasu='bundle exec rake db:rollback'
+function kanpai(){
+rails new $1 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+}
+#git
+alias check='git status'
+alias clone='git clone'
+alias push='git push'
+alias pull='git pull'
+alias rao='git remote add origin'
+alias gg='tsukutte;git add -A'
+alias wp='git commit -m;push'
+#heroku
+alias hh='tsukutte; git push heroku master'
